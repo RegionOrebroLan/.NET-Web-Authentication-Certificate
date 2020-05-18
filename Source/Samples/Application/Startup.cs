@@ -53,7 +53,8 @@ namespace Application
 					options.LogoutPath = "/Account/SignOut/";
 				})
 				.AddCookie(authenticationOptions.DefaultSignInScheme)
-				.AddCertificate(options => { this.Configuration.GetSection("Authentication:Certificate").Bind(options); });
+				.AddCertificate(CertificateAuthenticationDefaults.AuthenticationScheme, options => { this.Configuration.GetSection("Authentication:Certificate").Bind(options); })
+				.AddCertificate("SITHS-Certificate", "SITHS", options => { this.Configuration.GetSection("Authentication:SITHS-Certificate").Bind(options); });
 
 			services.AddControllersWithViews();
 		}
