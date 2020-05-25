@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RegionOrebroLan;
 using RegionOrebroLan.Web.Authentication.Certificate;
 
 namespace Application
@@ -31,6 +32,9 @@ namespace Application
 
 		public virtual void Configure(IApplicationBuilder applicationBuilder)
 		{
+			if(applicationBuilder == null)
+				throw new ArgumentNullException(nameof(applicationBuilder));
+
 			applicationBuilder
 				.UseDeveloperExceptionPage()
 				.UseStaticFiles()
@@ -42,6 +46,11 @@ namespace Application
 
 		public virtual void ConfigureServices(IServiceCollection services)
 		{
+			if(services == null)
+				throw new ArgumentNullException(nameof(services));
+
+			services.AddSingleton<IApplicationDomain, ApplicationHost>();
+
 			var authenticationSection = this.Configuration.GetSection("Authentication");
 			var authenticationOptions = new AuthenticationOptions();
 			authenticationSection.Bind(authenticationOptions);
