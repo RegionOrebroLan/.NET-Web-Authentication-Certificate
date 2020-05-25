@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -27,7 +28,11 @@ namespace RegionOrebroLan.Web.Authentication.Certificate.IntegrationTests
 		[TestMethod]
 		public void AddCertificate_ShouldMakeTheCertificateAuthenticationHandlerAvailable()
 		{
+			var hostEnvironmentMock = new Mock<IHostEnvironment>();
+			hostEnvironmentMock.Setup(hostEnvironment => hostEnvironment.ContentRootPath).Returns(Global.ProjectDirectoryPath);
+
 			var services = new ServiceCollection().AddAuthentication().AddCertificate().Services;
+			services.AddSingleton(hostEnvironmentMock.Object);
 			services.AddSingleton(Mock.Of<ILoggerFactory>());
 			var serviceProvider = services.BuildServiceProvider();
 			var httpContext = new DefaultHttpContext
