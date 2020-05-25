@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RegionOrebroLan;
 using RegionOrebroLan.Web.Authentication.Certificate;
 
 namespace Application
@@ -48,8 +47,6 @@ namespace Application
 		{
 			if(services == null)
 				throw new ArgumentNullException(nameof(services));
-
-			services.AddSingleton<IApplicationDomain, ApplicationHost>();
 
 			var authenticationSection = this.Configuration.GetSection("Authentication");
 			var authenticationOptions = new AuthenticationOptions();

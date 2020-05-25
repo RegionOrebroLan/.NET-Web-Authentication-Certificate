@@ -47,7 +47,7 @@ namespace RegionOrebroLan.Web.Authentication.Certificate
 
 			authenticationBuilder.Services.TryAddSingleton(AppDomain.CurrentDomain);
 			authenticationBuilder.Services.TryAddSingleton<FileCertificateResolver>();
-			authenticationBuilder.Services.TryAddSingleton<IApplicationDomain, AppDomainWrapper>();
+			authenticationBuilder.Services.TryAddSingleton<IApplicationDomain, ApplicationHost>();
 			authenticationBuilder.Services.TryAddSingleton<ICertificatePrincipalFactory, CertificatePrincipalFactory>();
 			authenticationBuilder.Services.TryAddSingleton<ICertificateResolver, CertificateResolver>();
 			authenticationBuilder.Services.TryAddSingleton<ICertificateValidator, CertificateValidator>();
