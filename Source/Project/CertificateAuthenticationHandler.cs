@@ -54,7 +54,7 @@ namespace RegionOrebroLan.Web.Authentication.Certificate
 					return AuthenticateResult.NoResult();
 				}
 
-				var clientCertificate = await Context.Connection.GetClientCertificateAsync().ConfigureAwait(false);
+				var clientCertificate = await this.Context.Connection.GetClientCertificateAsync().ConfigureAwait(false);
 
 				if(clientCertificate == null)
 				{
