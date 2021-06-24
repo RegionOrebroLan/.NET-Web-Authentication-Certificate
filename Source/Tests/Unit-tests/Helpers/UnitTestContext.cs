@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Authentication;
-using RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Mocks;
+using RegionOrebroLan.Web.Authentication.Certificate;
+using UnitTests.Mocks;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Helpers
+namespace UnitTests.Helpers
 {
 	public class UnitTestContext
 	{

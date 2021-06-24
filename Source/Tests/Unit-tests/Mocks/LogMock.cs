@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Extensions.Logging;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Mocks
+namespace UnitTests.Mocks
 {
 	public class LogMock
 	{

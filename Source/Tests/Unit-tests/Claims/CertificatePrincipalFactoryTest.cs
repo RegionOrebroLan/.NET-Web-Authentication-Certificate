@@ -2,7 +2,7 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RegionOrebroLan.Web.Authentication.Certificate.Claims;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Claims
+namespace UnitTests.Claims
 {
 	[TestClass]
 	public class CertificatePrincipalFactoryTest

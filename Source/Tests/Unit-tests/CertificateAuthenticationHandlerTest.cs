@@ -12,10 +12,10 @@ using RegionOrebroLan.Security.Cryptography.Validation;
 using RegionOrebroLan.Security.Cryptography.Validation.Configuration;
 using RegionOrebroLan.Validation;
 using RegionOrebroLan.Web.Authentication.Certificate.Claims;
-using RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Helpers;
-using RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Mocks;
+using UnitTests.Helpers;
+using UnitTests.Mocks;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests
+namespace UnitTests
 {
 	[TestClass]
 	public class CertificateAuthenticationHandlerTest

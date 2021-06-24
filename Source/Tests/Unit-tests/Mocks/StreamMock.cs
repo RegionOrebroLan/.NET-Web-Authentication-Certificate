@@ -1,7 +1,7 @@
 using System.IO;
 using System.Text;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Mocks
+namespace UnitTests.Mocks
 {
 	public class StreamMock : MemoryStream
 	{

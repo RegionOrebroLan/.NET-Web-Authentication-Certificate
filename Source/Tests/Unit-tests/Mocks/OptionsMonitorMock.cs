@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Options;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Mocks
+namespace UnitTests.Mocks
 {
 	public class OptionsMonitorMock<T> : IOptionsMonitor<T> where T : new()
 	{

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Http.Internal;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Mocks
+namespace UnitTests.Mocks
 {
 	public class HttpContextMock : HttpContext
 	{

@@ -4,9 +4,10 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RegionOrebroLan.Security.Cryptography.Validation;
+using RegionOrebroLan.Web.Authentication.Certificate;
 using RegionOrebroLan.Web.Authentication.Certificate.Claims;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Mocks
+namespace UnitTests.Mocks
 {
 	/// <summary>
 	/// A mock of CertificateAuthenticationHandler so we can call protected members.

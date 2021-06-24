@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.IntegrationTests
+namespace IntegrationTests
 {
 	[SuppressMessage("Naming", "CA1716:Identifiers should not match keywords")]
 	public static class Global

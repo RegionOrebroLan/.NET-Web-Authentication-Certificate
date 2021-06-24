@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RegionOrebroLan.Web.Authentication.Certificate.Claims;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.IntegrationTests.Claims
+namespace IntegrationTests.Claims
 {
 	[TestClass]
 	public class CertificatePrincipalFactoryTest

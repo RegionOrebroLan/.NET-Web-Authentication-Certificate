@@ -1,8 +1,9 @@
 using System;
 using System.Text.Encodings.Web;
-using RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Mocks;
+using RegionOrebroLan.Web.Authentication.Certificate;
+using UnitTests.Mocks;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Helpers
+namespace UnitTests.Helpers
 {
 	public class UnitTestContextBuilder
 	{

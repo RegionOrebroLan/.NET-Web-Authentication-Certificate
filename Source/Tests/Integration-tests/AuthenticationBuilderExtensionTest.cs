@@ -5,8 +5,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using RegionOrebroLan.Web.Authentication.Certificate;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.IntegrationTests
+namespace IntegrationTests
 {
 	[TestClass]
 	public class AuthenticationBuilderExtensionTest

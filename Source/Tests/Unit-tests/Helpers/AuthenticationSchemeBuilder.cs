@@ -1,7 +1,8 @@
 using System;
 using Microsoft.AspNetCore.Authentication;
+using RegionOrebroLan.Web.Authentication.Certificate;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Helpers
+namespace UnitTests.Helpers
 {
 	public class AuthenticationSchemeBuilder
 	{

@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
-namespace RegionOrebroLan.Web.Authentication.Certificate.UnitTests.Helpers
+namespace UnitTests.Helpers
 {
 	public class CertificateBuilder
 	{
