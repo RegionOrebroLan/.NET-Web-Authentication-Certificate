@@ -44,7 +44,7 @@ namespace Application.Controllers
 				returnUrl = "~/";
 
 			if(!this.Url.IsLocalUrl(returnUrl))
-				throw new Exception("Invalid return-url.");
+				throw new InvalidOperationException("Invalid return-url.");
 
 			var model = new SignInViewModel
 			{

@@ -133,13 +133,16 @@ namespace Application.Controllers
 				returnUrl = "~/";
 
 			if(!this.Url.IsLocalUrl(returnUrl))
-				throw new Exception($"\"{returnUrl}\" is an invalid return-url.");
+				throw new InvalidOperationException($"\"{returnUrl}\" is an invalid return-url.");
 
 			return returnUrl;
 		}
 
 		protected internal virtual void ResolveAuthenticationProperties(AuthenticateResult authenticateResult, AuthenticationProperties authenticationProperties)
 		{
+			if(authenticateResult == null)
+				throw new ArgumentNullException(nameof(authenticateResult));
+
 			const string idTokenName = "id_token";
 
 			var idToken = authenticateResult.Properties.GetTokenValue(idTokenName);
