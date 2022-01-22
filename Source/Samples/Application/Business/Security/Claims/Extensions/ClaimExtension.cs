@@ -15,7 +15,7 @@ namespace Application.Business.Security.Claims.Extensions
 			claims = (claims ?? Enumerable.Empty<Claim>()).ToArray();
 
 			// ReSharper disable LoopCanBeConvertedToQuery
-			foreach(var typeName in typeNames)
+			foreach(var typeName in typeNames ?? Array.Empty<string>())
 			{
 				var claim = claims.FirstOrDefault(item => string.Equals(item.Type, typeName, StringComparison.OrdinalIgnoreCase));
 
